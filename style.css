@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@font-face {
+  font-family:'Jameel Noori Nastaleeq' ;
+  src: url('Jameel Noori Nastaleeq.ttf');
+}
+
+@font-face {
+  font-family:'Jameel Noori Nastaleeq Kasheeda' ;
+  src: url('Jameel Noori Nastaleeq Kasheeda.ttf');
+}  
+
+
+:root{
+ color: #155768;
+  color: #555;
+}
+
+*{
+  font-family: 'Jameel Noori Nastaleeq';
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  
+}
+
+*::selection{
+  background:#155768;
+  color:#fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.heading{
+  font-size: 4rem;
+  color:#155768;
+  text-align: center;
+  padding:0 1rem;
+  padding-top: 6rem;
+  letter-spacing: .2rem;
+  font-weight: 500;
+}
+
+.title{
+  padding:0 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  color:#aaa;
+}
+
+
+ /* header section starts   */
+
+header{
+  width:96%;
+  background:#fff;
+  position: fixed;
+  top:2rem; left:50%;
+  transform: translateX(-50%);
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1rem 2rem;
+  z-index: 1000;
+  transition: .5s;
+}
+
+.header-active{
+  top:0;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  color: black;
+}
+
+header .navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  direction: rtl;
+  color: #155768;
+}
+
+header .navbar ul li{
+  margin:0 1rem;
+}
+
+header .navbar ul li a{
+  font-size: 2rem;
+  color:#155768;
+  transition: .2s;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover{
+  color:#FFC300 ;
+}
+
+header .logo{
+  font-size: 2.5rem;
+  color: #555;
+  font-family: 'Jameel Noori Nastaleeq Kasheeda';
+}
+
+header .logo i{
+  color:#555;
+  padding:0 .2rem;
+}
+
+header .fa-bars{
+  font-size: 3rem;
+  color:var(--pink);
+  cursor: pointer;
+  display: none;
+  transition: .2s;
+  
+}
+
+
+
+/* home section starts */
+.home{
+  min-height: 100vh;
+  background:#155768;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  overflow:hidden;
+  position: relative;
+}
+
+.home .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+
+.home .content h1{
+  font-family: 'Jameel Noori Nastaleeq Kasheeda';
+  font-size: 7rem;
+  color: #fff;
+  padding:0 1rem;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+
+.home .content p{
+  font-size: 2.5rem;
+  color:#eee;
+  padding:1rem 25rem;
+  text-align: justify;
+}
+
+.home .box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  direction: rtl;
+}
+
+.home .box-container .box{
+  height:36rem;
+  width:25rem;
+  background:#fff;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.home .box-container .box i{
+  height:4rem;
+  width:4rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 50%;
+  color:#fff;
+  background:#155768;
+  font-size: 2rem;
+  margin:2rem 0;
+  transition: .2s;
+}
+
+.home .box-container .box h3{
+  font-size: 2.5rem;
+  color:#155768;
+  transition: .2s;
+}
+
+.home .box-container .box p{
+  font-size: 1.5rem;
+  padding:.7rem 2rem;
+  color:#555;
+  text-align: justify;
+}
+
+.home .box-container .box button{
+  height:4rem;
+width:20rem;
+border-radius: 5rem;
+background:#155768;
+color:#fff;
+font-size: 2rem;
+cursor: pointer;
+transition: .2s;
+border:none;
+box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+margin-top: 10px;
+}
+
+.home .box-container .box button:hover{
+  letter-spacing: .2rem;
+  opacity: .8;
+}
+
+.home .box-container .box:hover i{
+  letter-spacing: .2rem;
+  opacity: .8;
+}
+
+.home .box-container .box:hover h3{
+  letter-spacing: .1rem;
+}
+
+.home::before{
+  content: '';
+  position: absolute;
+  bottom:-25rem; left:50%;
+  transform: translateX(-50%);
+  border-top: 70vh solid #fff;
+  width:120%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+/* about section starts */
+.about {
+  background:#f9f9f9;
+  direction: rtl;
+  
+
+}
+
+.about .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:2rem 0;
+  
+
+}
+
+.about .row .content{
+  padding:2rem;
+  margin: 1rem;
+  background:#fff;
+  text-align: center;
+  width:40rem;
+  height:50rem ;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+
+.about .row .content p{
+  font-size:2rem;
+  padding:.7rem 2rem;
+  color:#555;
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.about .row .content h3{
+  font-size: 2.5rem;
+  color:#155768;
+
+}
+
+
+.about .row .content button{
+  height:4rem;
+  width:17rem;
+  background:#155768;
+  color:#fff;
+  border:none;
+  border-radius: 5rem;
+  box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+  cursor: pointer;
+  font-size: 2rem;
+  transition: .2s;
+}
+
+.about .row .content button:hover{
+  letter-spacing: .2rem;
+  opacity: .8;
+}
+
+
+
+/* department section starts */
+.department{
+  background:#f9f9f9;
+  direction: rtl;
+}
+
+.department .card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:2rem 0;
+}
+
+.department .card-container .card{
+  padding:2rem;
+  margin: 2rem;
+  background:#fff;
+  text-align: center;
+  width:28rem;
+  height:40rem ;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+.department .card-container .card h3{
+  color:#145769;
+  font-size: 2rem;
+  padding:.5rem 0;
+}
+
+.department .card-container .card p{
+  font-size: 1.7rem;
+  color:#555;
+  text-align: justify;
+}
+
+
+
+
+/* broadcast section starts */
+.broadcast .box-container{
+  width:85%;
+  display: flex;
+  justify-content: center;
+  margin:0 auto;
+  padding-top: 4rem;
+  flex-wrap: wrap;
+  direction:rtl ;
+}
+
+.broadcast .box-container .box{
+  height:30rem;
+  width:25rem;
+  margin:3.5rem 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: .3rem .3rem 0 .1rem #555,
+              .5rem .5rem .5rem rgba(0,0,0,.3);
+}
+
+
+
+.broadcast .box-container .box h3{
+  font-size: 3rem;
+  color:#155768;
+}
+
+
+.broadcast .box-container .box img{
+ width: 18rem ;
+ height: 23rem;
+ box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+ object-fit: cover;
+ border-radius: 1%;
+ 
+}
+
+
+
+/* gallery section starts */
+.gallery{
+  background:#f9f9f9;
+  color: #155768;
+   direction: rtl;
+}
+
+.gallery .box-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.gallery .box-container .box{
+  width:28rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  background:#fff;
+  margin:1rem 2rem;
+}
+
+.gallery .box-container .box img{
+  height:18rem;
+  width:25rem;
+  object-fit: cover;
+  border-radius: 1%;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+ 
+ 
+}
+
+.gallery .box-container .box h3{
+  margin-top: .5rem;
+  font-size: 2rem;
+  color:#155768;
+  padding:0 .5rem;
+}
+
+
+
+
+.contact{
+  background:#555;
+}
+
+.contact .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:5rem 0;
+}
+
+.contact .heading{
+  font-size: 5rem;
+  color:white;
+  text-align: center;
+  padding:0 1rem;
+  padding-top: 6rem;
+  letter-spacing: .2rem;
+  font-weight: 500;
+  font-family: 'Jameel Noori Nastaleeq Kasheeda';
+}
+
+.contact .row .image img{
+  width: 50vw;
+  height:70vh;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  border-radius: 1rem;
+}
+
+.contact .row .form-container{
+  width:50%;
+  padding-right: 6rem;
+}
+
+.contact .row .form-container input, textarea{
+  height:4rem;
+  width:100%;
+  background:#fff;
+  border:none;
+  border-radius: 5rem;
+  padding:0 1rem;
+  margin:1rem 0;
+  color:#333;
+  font-size: 1.7rem;
+  transition: .2s linear;
+}
+
+.contact .row .form-container textarea{
+  height:20rem;
+  border-radius: 1rem;
+  padding:1rem; 
+  resize: none;
+}
+
+.contact .row .form-container input[type="submit"]{
+  width:16rem;
+  background:#fff;
+  color:#115061;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: .2s;
+}
+
+.contact .row .form-container input[type="submit"]:hover{
+  background:none;
+  color:#fff;
+  border:.2rem solid #fff;
+}
+
+.footer{
+  text-align: center;
+}
+
+.footer .icons{
+  padding:3rem 0;
+}
+
+.footer .icons a{
+  height:4.5rem;
+  width: 4.5rem;
+  line-height: 4.2rem;
+  text-align: center;
+  border-radius: 50%;
+  color:#145769;
+  border:.2rem solid #145769;
+  font-size: 2rem;
+  margin:0 .1rem;
+  transition: .2s linear;
+}
+
+.footer .icons a:hover{
+  color:#fff;
+  background:#145769;
+  border-color: #145769;
+}
+
+
+.footer .credit{
+  font-size: 2rem;
+  border-top: .1rem solid #999;
+  margin:0 auto;
+  margin-bottom: 2rem;
+  color:#666;
+  width:90%;
+  padding:1rem 0;
+}
+
+.footer .credit span{
+  color:var#145769;
+}
+
+
+header .fa-times{
+  transform: rotate(180deg);
+  color:var(--violet);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:768px){
+
+  html{
+    font-size: 50%;
+    font-family: 'Jameel Noori Nastaleeq';
+  }
+
+  header .fa-bars{
+    display: block;
+  }
+
+  header .navbar{
+    position: fixed;
+    top:-100rem; left:0;
+    width:100%;
+    background:#fff;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: .2s linear;
+  }
+
+  header .navbar ul{
+    flex-flow: column;
+    padding:2rem 0;
+  }
+
+  header .navbar ul li{
+    margin:1rem 0;
+    width:100%;
+    text-align: center;
+  }
+
+  header .navbar ul li a{
+    font-size: 2.5rem;
+    display: block;
+  }
+
+  header .logo{
+    font-size: 3.5rem;
+  }
+
+  header .nav-toggle{
+    top:5.5rem;
+    opacity: 1;
+  }
+
+  .home .content p{
+    padding:1.5rem 1.5rem;
+   text-align: justify;
+     direction: rtl;
+  }
+
+  .home::before{
+    display: none;
+  }
+ 
+ .home .box-container .box{
+  height:35rem;
+  width:35rem;
+ }
+ 
+ .home .box-container .box p{
+    text-align: justify;
+
+ }
+
+.contact .row{
+    flex-flow: column;
+  }
+
+  .contact .row .image img{
+    height:40vh;
+    width:90vw;
+  }
+
+  .contact .row .form-container{
+    width:90%;
+    padding:0;
+  }
+}
